@@ -1,0 +1,9 @@
+include ':app'
+rootProject.name = "FlutterEmbedded"
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'flutter_module/.android/include_flutter.groovy'
+))
+include ':test_flutter'
+project(':test_flutter').projectDir = new File('../test_flutter')
