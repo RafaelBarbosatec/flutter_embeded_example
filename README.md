@@ -7,3 +7,6 @@ Exemplo de estrutura base para trabalhar com flutter em um projeto nativo
 Para que o código nativo encontre o módulo flutter, você precisará rodar o comando `flutter build aar` para android e/ou `flutter build ios-framework` para iOS dentro da pasta `flutter_module` pelo menos uma vez na sua máquina.
 
 Necessário roda `pod install` no projeto IOS após `flutter build ios-framework`.
+
+---
+Para rodar somente o módulo flutter (flutter_module) execute `flutter run -t 'lib/main.debug.dart'`
