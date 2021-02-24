@@ -1,3 +1,9 @@
 # flutter_embeded_example
 
 Exemplo de estrutura base para trabalhar com flutter em um projeto nativo
+
+![IMG](https://github.com/RafaelBarbosatec/flutter_embeded_example/blob/main/flutter_embeded.png)
+
+Para que o código nativo encontre o módulo flutter, você precisará rodar o comando `flutter build aar` para android e/ou `flutter build ios-framework` para iOS pelo menos uma vez na sua máquina.
+
+Necessário roda `pod install` no projeto IOS após `flutter build ios-framework`.
