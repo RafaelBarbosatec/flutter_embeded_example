@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_flutter/pages/dashboard.dart';
+import 'pages/dashboard.dart';
 import 'package:test_flutter/shared/route.dart';
 
 import 'injector_debug.dart';
