@@ -20,10 +20,7 @@ object FlutterModule {
         fEngine.dartExecutor.executeDartEntrypoint(DartExecutor.DartEntrypoint.createDefault())
         FlutterEngineCache.getInstance().put(ENGINE_CACHE_NAME, fEngine)
 
-        navigator = FlutterNavigatorManager(fEngine)
-        navigator.setup(context)
-
-        channelManager = FlutterChannelManager(fEngine)
-        channelManager.setup(context)
+        navigator = FlutterNavigatorManager(fEngine,context)
+        channelManager = FlutterChannelManager(fEngine,context)
     }
 }

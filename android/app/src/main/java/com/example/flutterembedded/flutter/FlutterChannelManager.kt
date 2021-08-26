@@ -5,9 +5,13 @@ import android.util.Log
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
-class FlutterChannelManager(private val engine: FlutterEngine) {
+class FlutterChannelManager(private val engine: FlutterEngine,private val context: Context?) {
 
-    fun setup(context: Context?){
+    init {
+        initTestChannel()
+    }
+
+    private fun initTestChannel(){
 
         MethodChannel(
                 engine.dartExecutor.binaryMessenger,

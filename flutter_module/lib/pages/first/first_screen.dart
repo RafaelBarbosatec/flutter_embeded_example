@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_flutter/main.dart';
+import 'package:test_flutter/injector.dart';
 import 'package:test_flutter/shared/native/native_channels.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -9,12 +9,12 @@ class FirstScreen extends StatefulWidget {
 
 class _FirstScreenState extends State<FirstScreen> {
   int _counter = 0;
-  NativeChannels nativeChannels;
+  late NativeChannels nativeChannels;
 
   @override
   void initState() {
-    nativeChannels = RUN_DEV ? NativeChannelsDebug() : NativeChannels();
-    nativeChannels.senMethod('Hello native');
+    nativeChannels = Injector.get();
+    nativeChannels.sendMethod('Hello native');
     super.initState();
   }
 
@@ -53,7 +53,7 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 
-  void _send({String text}) {
-    nativeChannels.senMethod(text ?? 'count: $_counter');
+  void _send({String? text}) {
+    nativeChannels.sendMethod(text ?? 'count: $_counter');
   }
 }

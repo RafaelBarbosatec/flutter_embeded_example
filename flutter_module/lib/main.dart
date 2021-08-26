@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter/injector.dart';
 import 'package:test_flutter/shared/navigator_observer.dart';
 import 'package:test_flutter/shared/route.dart';
 
-bool RUN_DEV = false;
-
-void main() => runApp(MyApp());
+void main() {
+  Injector.injectDependencies();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

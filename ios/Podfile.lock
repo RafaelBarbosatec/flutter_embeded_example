@@ -19,10 +19,10 @@ EXTERNAL SOURCES:
     :path: "../flutter_module/.ios/Flutter"
 
 SPEC CHECKSUMS:
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: ac41d61a47ae5bf8195a5598d2d63754888ec0d5
   FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
   test_flutter: 4265ea1574aeea41e4c72382c305f24013bfae07
 
 PODFILE CHECKSUM: 3f59df507edd261d94cf22713d8569024446165b
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

@@ -5,9 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Flutter: Attach to Device",
+            "name": "Debug",
+            "request": "launch",
             "type": "dart",
-            "request": "attach"
+            "program": "lib.debug/main.debug.dart",
         },
         {
             "name": "test_flutter",

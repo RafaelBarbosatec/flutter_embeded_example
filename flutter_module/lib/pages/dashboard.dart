@@ -20,13 +20,13 @@ class DashBoard extends StatelessWidget {
             SizedBox(
               height: 100,
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Primeira tela'),
               onPressed: () {
                 Navigator.pushNamed(context, '/first');
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Segunda tela'),
               onPressed: () {
                 Navigator.pushNamed(context, '/second');

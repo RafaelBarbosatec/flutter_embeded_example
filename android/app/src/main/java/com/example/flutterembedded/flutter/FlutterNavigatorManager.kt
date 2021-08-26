@@ -7,7 +7,11 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
-class FlutterNavigatorManager(private val engine: FlutterEngine) {
+class FlutterNavigatorManager(private val engine: FlutterEngine,private val context: Context?) {
+
+    init {
+        initNavigatorChannel()
+    }
 
     fun  goHome(context: Context?){
         context?.let {
@@ -25,7 +29,7 @@ class FlutterNavigatorManager(private val engine: FlutterEngine) {
         }
     }
 
-    fun setup(context: Context?) {
+    private fun initNavigatorChannel(){
         MethodChannel(
                 engine.dartExecutor.binaryMessenger,
                 "NavigatorChannel"
