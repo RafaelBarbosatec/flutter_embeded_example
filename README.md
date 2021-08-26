@@ -1,6 +1,6 @@
 # flutter_embeded_example
 
-Exemplo de estrutura base para trabalhar com flutter em um projeto nativo
+Exemplo de estrutura base para trabalhar com flutter em um projeto nativo.
 
 ![IMG](https://github.com/RafaelBarbosatec/flutter_embeded_example/blob/main/flutter_embeded.png)
 
@@ -10,3 +10,6 @@ Necessário rodar `pod install` no projeto IOS após `flutter build ios-framewor
 
 ---
 Para rodar somente o módulo flutter (flutter_module) execute `flutter run -t 'lib.debug/main.debug.dart'`
+
+
+Passos para integrar o Flutter no seu app nativo [link](https://flutter.dev/docs/development/add-to-app)
