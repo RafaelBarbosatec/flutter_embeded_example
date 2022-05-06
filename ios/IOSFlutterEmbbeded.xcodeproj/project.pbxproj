@@ -124,6 +124,7 @@
 				135BCE8625C3259900AEDF98 /* Frameworks */,
 				135BCE8725C3259900AEDF98 /* Resources */,
 				C1E46F67F03B8B5BE69AE233 /* [CP] Embed Pods Frameworks */,
+				13FC033B2825781D0059B544 /* Embed Flutter */,
 			);
 			buildRules = (
 			);
@@ -183,13 +184,31 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00A0BB3807B6B92AFB966D09 /* [CP-User] Run Flutter Build test_flutter Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			name = "[CP-User] Run Flutter Build test_flutter Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build\n";
+		};
+		13FC033B2825781D0059B544 /* Embed Flutter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Flutter";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed\n";
 		};
 		BEA22D36B8796D1E89E7AE38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -388,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE610F8A3DFFC4EE561EABDB /* Pods-IOSFlutterEmbbeded.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelbarbosatec.IOSFlutterEmbbeded;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0791496F4470F0A6AB3E8824 /* Pods-IOSFlutterEmbbeded.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -418,7 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelbarbosatec.IOSFlutterEmbbeded;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
