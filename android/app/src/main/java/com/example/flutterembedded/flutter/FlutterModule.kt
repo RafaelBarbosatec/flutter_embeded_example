@@ -12,7 +12,9 @@ object FlutterModule {
     const val ENGINE_CACHE_NAME = "f_engine"
     private lateinit var fEngine: FlutterEngine
 
-    lateinit var navigator: FlutterNavigatorManager
+    @SuppressLint("StaticFieldLeak")
+     lateinit var navigator: FlutterNavigatorManager
+    @SuppressLint("StaticFieldLeak")
     private lateinit var channelManager: FlutterChannelManager
 
     fun init(context: Context){

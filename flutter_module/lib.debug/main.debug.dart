@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/dashboard.dart';
-import 'package:test_flutter/shared/route.dart';
+import 'package:test_flutter/shared/navigation/route.dart';
 
 import 'injector_debug.dart';
+import 'pages/dashboard.dart';
 
 void main() {
   InjectorDebug.injectDependencies();

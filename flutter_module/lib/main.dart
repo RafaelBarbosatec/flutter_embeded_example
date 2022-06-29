@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter/injector.dart';
-import 'package:test_flutter/shared/navigator_observer.dart';
-import 'package:test_flutter/shared/route.dart';
+import 'package:test_flutter/shared/navigation/navigator_observer.dart';
+import 'package:test_flutter/shared/navigation/route.dart';
 
 void main() {
   Injector.injectDependencies();
