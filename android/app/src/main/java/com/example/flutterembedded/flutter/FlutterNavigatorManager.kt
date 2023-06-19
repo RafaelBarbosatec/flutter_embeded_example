@@ -5,9 +5,11 @@ import android.content.Intent
 import com.example.flutterembedded.pages.SecondActivity
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 
-class FlutterNavigatorManager(private val engine: FlutterEngine,private val context: Context?) {
+class FlutterNavigatorManager(private val engine: FlutterEngine,private val context: Context?) :
+    MethodChannel.MethodCallHandler {
 
     init {
         initNavigatorChannel()
@@ -33,15 +35,17 @@ class FlutterNavigatorManager(private val engine: FlutterEngine,private val cont
         MethodChannel(
                 engine.dartExecutor.binaryMessenger,
                 "NavigatorChannel"
-        ).setMethodCallHandler { call, result ->
-            if(call.method == "second"){
-                context?.let {
-                    val intent = Intent(context, SecondActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    it.startActivity(intent)
-                }
+        ).setMethodCallHandler(this)
+    }
+
+    override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
+        if(call.method == "second"){
+            context?.let {
+                val intent = Intent(context, SecondActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                it.startActivity(intent)
             }
-            result.success(null)
         }
+        result.success(null)
     }
 }
