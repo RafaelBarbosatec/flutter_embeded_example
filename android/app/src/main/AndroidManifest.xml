@@ -13,7 +13,9 @@
         <activity
             android:name=".pages.SecondActivity"
             android:label="@string/title_activity_second"
-            android:theme="@style/Theme.FlutterEmbedded.NoActionBar"></activity>
+            android:theme="@style/Theme.FlutterEmbedded.NoActionBar">
+
+        </activity>
         <activity android:name=".pages.MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

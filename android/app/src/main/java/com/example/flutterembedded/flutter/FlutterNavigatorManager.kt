@@ -8,8 +8,7 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 
-class FlutterNavigatorManager(private val engine: FlutterEngine,private val context: Context?) :
-    MethodChannel.MethodCallHandler {
+class FlutterNavigatorManager(private val engine: FlutterEngine,private val context: Context) {
 
     init {
         initNavigatorChannel()
@@ -35,16 +34,14 @@ class FlutterNavigatorManager(private val engine: FlutterEngine,private val cont
         MethodChannel(
                 engine.dartExecutor.binaryMessenger,
                 "NavigatorChannel"
-        ).setMethodCallHandler(this)
+        ).setMethodCallHandler { call, result -> onNavigatorMethodCall(call, result) }
     }
 
-    override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
+     private fun onNavigatorMethodCall(call: MethodCall, result: MethodChannel.Result) {
         if(call.method == "second"){
-            context?.let {
-                val intent = Intent(context, SecondActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                it.startActivity(intent)
-            }
+            val intent = Intent(context, SecondActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
         }
         result.success(null)
     }
