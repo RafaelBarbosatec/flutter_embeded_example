@@ -56,5 +56,25 @@
       <option name="name" value="maven" />
       <option name="url" value="file:$PROJECT_DIR$/../test_flutter/build/host/outputs/repo" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/../../../Flutter%20projects/test_flutter/build/host/outputs/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/../../../Flutter%20projects/flutter_embeded_example/flutter_module/test_flutter/build/host/outputs/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/../../../Flutter%20projects/flutter_embeded_example/test_flutter/build/host/outputs/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="MavenRepo" />
+      <option name="name" value="MavenRepo" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
+    </remote-repository>
   </component>
 </project>

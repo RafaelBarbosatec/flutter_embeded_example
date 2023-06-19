@@ -1,6 +1,6 @@
-import 'package:test_flutter/shared/native/navigator_channels.dart';
+import 'package:test_flutter/shared/native/navigator_channel.dart';
 
-class NativeChannelsDebug implements NavigatorChannels {
+class NavigatorChannelDebug implements NavigatorChannel {
   Future sendMethod(String method) {
     print('NativeChannels(senMethod): $method');
     return Future.value();

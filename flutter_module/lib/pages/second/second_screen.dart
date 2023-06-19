@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_flutter/injector.dart';
-import 'package:test_flutter/shared/native/navigator_channels.dart';
+import 'package:test_flutter/shared/native/navigator_channel.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
@@ -16,7 +16,7 @@ class SecondScreen extends StatelessWidget {
             Text('Second Screen'),
             ElevatedButton(
               onPressed: () {
-                Injector.get<NavigatorChannels>().goToSecondScreen();
+                Injector.get<NavigatorChannel>().goToSecondScreen();
               },
               child: Text('Go second native screen'),
             )

@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 ///
 /// Rafaelbarbosatec
 /// on 29/06/22
-class NavigatorChannels {
+class NavigatorChannel {
   final MethodChannel _platformTest = MethodChannel('NavigatorChannel');
 
   Future? sendMethod(String method) {
