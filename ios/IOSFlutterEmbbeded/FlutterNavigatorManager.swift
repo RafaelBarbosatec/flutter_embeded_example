@@ -14,6 +14,11 @@ class FlutterNavigatorManager{
     
     init(engine: FlutterEngine) {
         self.engine = engine
+        FlutterMethodChannel(
+            name: "NavigatorChannel",
+            binaryMessenger: engine.binaryMessenger
+        ).setMethodCallHandler({(call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in self.onNavigatorMethodCall(call: call, result: result)
+        });
     }
     
     func goHome(navController: UINavigationController?) {
@@ -28,6 +33,11 @@ class FlutterNavigatorManager{
             FlutterViewController(engine: engine, nibName: nil, bundle: nil)
         flutterViewController.pushRoute("/second")
         navController?.pushViewController(flutterViewController, animated: true)
+    }
+    
+    func onNavigatorMethodCall(call: FlutterMethodCall, result: @escaping FlutterResult){
+        // chamar tela nativa
+        print(call.method);
     }
     
 }
